@@ -20,6 +20,7 @@ const handleSearch = (e) => {
   
     </form>
       <input type="text" placeholder="Search for movies..." />
+      <button type="submit" className="search-button">Search</button>
       <div className="movie-grid">
         {movies.map(movie => (<MovieCard key={movie.id} movie={movie} />))}
       </div>

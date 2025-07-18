@@ -23,7 +23,7 @@ const handleSearch = (e) => {
       
   
     </form>
-      <input value={searchQuery} type="text" placeholder="Search for movies..." />
+      <input value={searchQuery} onChange={(e)=> setSearchQuery(e.target.value)} type="text" placeholder="Search for movies..." />
       <button type="submit" className="search-button">Search</button>
       <div className="movie-grid">
         {movies.map(movie => (<MovieCard key={movie.id} movie={movie} />))}

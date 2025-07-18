@@ -1,5 +1,6 @@
 import MovieCard from "../components/MovieCard";
 import { useState } from "react";
+
 function Home() {
 
   const [searchQuery, setSearchQuery] = useState("");
@@ -12,24 +13,24 @@ function Home() {
   ]; 
   
 const handleSearch = (e) => {
-    e.preventDefault();
-    // Logic to handle search
-    alert("Search functionality is not implemented yet.");  
+    e.preventDefault();  
+    alert(searchQuery);  
   
-  }
-  return <div className="home">
+  };
+  return (
+  <div className="home">
     <form className="search-form" onSubmit={handleSearch}> 
      
-      
-  
-    </form>
       <input value={searchQuery} onChange={(e)=> setSearchQuery(e.target.value)} type="text" placeholder="Search for movies..." />
       <button type="submit" className="search-button">Search</button>
+  
+    </form>
+
       <div className="movie-grid">
         {movies.map(movie => (<MovieCard key={movie.id} movie={movie} />))}
       </div>
     </div>
-  
+  )
 }
 
 export default Home;

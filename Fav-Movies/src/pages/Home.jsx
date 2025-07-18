@@ -1,6 +1,9 @@
 import MovieCard from "../components/MovieCard";
 import { useState } from "react";
 function Home() {
+
+  const [searchQuery, setSearchQuery] = useState("");
+
   const movies = [
     {id: 1, title: "Inception", year: "2010", poster: "https://example.com/inception.jpg" },
     {id: 2, title: "Interstellar", year: "2014", poster: "https://example.com/interstellar.jpg" },

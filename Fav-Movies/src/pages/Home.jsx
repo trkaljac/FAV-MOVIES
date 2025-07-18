@@ -1,4 +1,5 @@
 import MovieCard from "../components/MovieCard";
+import { useState } from "react";
 function Home() {
   const movies = [
     {id: 1, title: "Inception", year: "2010", poster: "https://example.com/inception.jpg" },

@@ -1,6 +1,7 @@
 import MovieCard from "../components/MovieCard";
 import { useState } from "react";
 import NavBar from "../components/NavBar";
+import '../css/Home.css';
 
 function Home() {
 
